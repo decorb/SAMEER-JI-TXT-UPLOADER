@@ -25,7 +25,7 @@ def human_readable_size(size):
     return f"{round(size, 2)}{units[n]}"
 
 
-async def progress_bar(current, total, message: Message, start_time, tag="@DOCTOR_JB"):
+async def progress_bar(current, total, message: Message, start_time, tag="SAMEER BHYYA"):
     now = time.time()
     elapsed = now - start_time
     if elapsed == 0:
@@ -41,11 +41,11 @@ async def progress_bar(current, total, message: Message, start_time, tag="@DOCTO
     # Format status text
     progress_text = f"""
 ⟪ 💥 UPLOADER 💥 ⟫
-├SPEED ⚡ = {human_readable_size(speed)}/s
-├PROGRESS 🌀 = {round(percentage, 1)}%
-├LOADED 📥 = {human_readable_size(current)}
-├SIZE 🧲 = {human_readable_size(total)}
-├ETA ⏳ = {time.strftime('%Mm %Ss', time.gmtime(eta))}
+├SPEED ⚡ = {human_readable_size(speed)}/s  \n\n
+├PROGRESS 🌀 = {round(percentage, 1)}% \n\n
+├LOADED 📥 = {human_readable_size(current)} \n\n
+├SIZE 🧲 = {human_readable_size(total)}\n\n
+├ETA ⏳ = {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
 ⟬ {tag} ⟭
 
 {emoji_line}
