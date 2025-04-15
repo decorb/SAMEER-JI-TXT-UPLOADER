@@ -1,5 +1,5 @@
-# Don't Remove Credit Tg - @Tushar0125
-# Ask Doubt on telegram @Tushar0125
+# Don't Remove Credit Tg - @SAMEERJI91
+# Ask Doubt on telegram @SAMEERJI91
 
 import os
 import re
@@ -52,7 +52,7 @@ async def show_random_emojis(message):
     return emoji_message
     
 # Define the owner's user ID
-OWNER_ID = 5840594311 # Replace with the actual owner's user ID
+OWNER_ID = 7615363859 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
 SUDO_USERS = [5840594311,7856557198]
