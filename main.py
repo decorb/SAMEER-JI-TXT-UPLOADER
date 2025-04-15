@@ -1,5 +1,5 @@
-# Don't Remove Credit Tg - @SAMEERJI91
-# Ask Doubt on telegram @SAMEERJI91
+# Don't Remove Credit Tg - @Tushar0125
+# Ask Doubt on telegram @Tushar0125
 
 import os
 import re
@@ -41,13 +41,13 @@ from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 cookies_file_path = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
 
-pwimg = "https://graph.org/file/8add8d382169e326f67e0-3bf38f92e52955e977.jpg"
+#pwimg = "https://graph.org/file/8add8d382169e326f67e0-3bf38f92e52955e977.jpg"
 #ytimg = "https://graph.org/file/3aa806c302ceec62e6264-60ced740281395f68f.jpg"
 cpimg = "https://graph.org/file/5ed50675df0faf833efef-e102210eb72c1d5a17.jpg"  
 
 
 async def show_random_emojis(message):
-    emojis = ['💀','🎊', '🔮', '😎', '⚡️', '🚀', '✨', '💥', '🎉', '🥂', '🍾', '🦠', '🤖', '❤️‍🔥', '🕊️', '💃', '🥳','🐅','🦁']
+    emojis = ['🎊', '🔮', '😎', '⚡️', '🚀', '✨', '💥', '🎉', '🥂', '🍾', '🦠', '🤖', '❤️‍🔥', '🕊️', '💃', '🥳','🐅','🦁']
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
     
@@ -55,7 +55,7 @@ async def show_random_emojis(message):
 OWNER_ID = 7615363859 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
-SUDO_USERS = [5840594311,7856557198]
+SUDO_USERS = [5840594311,7856557198,6303334633]
 
 AUTH_CHANNEL = -1002572301679
 
@@ -109,9 +109,9 @@ async def sudo_command(bot: Client, message: Message):
 keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"@CHAT_WITH_SAMEER_BOT") ],
+                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"https://t.me/musafir_ji0") ],
                     [
-                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/TXT_UPDATE_AS") ],
+                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/SAMEER_OFFICAL_092") ],
                     [
                     InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/SAMEER_OFFICAL_092")                              
                 ],           
@@ -120,8 +120,25 @@ keyboard = InlineKeyboardMarkup(
     
 # Image URLs for the random image feature
 image_urls = [
-    "https://files.catbox.moe/b0ptct.jpg",
-     
+    "https://graph.org/file/996d4fc24564509244988-a7d93d020c96973ba8.jpg",
+    "https://graph.org/file/96d25730136a3ea7e48de-b0a87a529feb485c8f.jpg",
+    "https://graph.org/file/6593f76ddd8c735ae3ce2-ede9fa2df40079b8a0.jpg",
+    "https://graph.org/file/a5dcdc33020aa7a488590-79e02b5a397172cc35.jpg",
+    "https://graph.org/file/0346106a432049e391181-7560294e8652f9d49d.jpg",
+    "https://graph.org/file/ba49ebe9a8e387addbcdc-be34c4cd4432616699.jpg",
+    "https://graph.org/file/26f98dec8b3966687051f-557a430bf36b660e24.jpg",
+    "https://graph.org/file/2ae78907fa4bbf3160ffa-2d69cd23fa75cb0c3a.jpg",
+    "https://graph.org/file/05ef9478729f165809dd7-3df2f053d2842ed098.jpg",
+    "https://graph.org/file/b1330861fed21c4d7275c-0f95cca72c531382c1.jpg",
+    "https://graph.org/file/0ebb95807047b062e402a-9e670a0821d74e3306.jpg",
+    "https://graph.org/file/b4e5cfd4932d154ad6178-7559c5266426c0a399.jpg",
+    "https://graph.org/file/44ffab363c1a2647989bc-00e22c1e36a9fd4156.jpg",
+    "https://graph.org/file/5f0980969b54bb13f2a8a-a3e131c00c81c19582.jpg",
+    "https://graph.org/file/6341c0aa94c803f94cdb5-225b2999a89ff87e39.jpg",
+    "https://graph.org/file/90c9f79ec52e08e5a3025-f9b73e9d17f3da5040.jpg",
+    "https://graph.org/file/1aaf27a49b6bd81692064-30016c0a382f9ae22b.jpg",
+    "https://graph.org/file/702aa31236364e4ebb2be-3f88759834a4b164a0.jpg",
+    "https://graph.org/file/d0c6b9f6566a564cd7456-27fb594d26761d3dc0.jpg",
     # Add more image URLs as needed
 ]
 random_image_url = random.choice(image_urls) 
@@ -129,7 +146,7 @@ random_image_url = random.choice(image_urls)
 caption = (
         "**ʜᴇʟʟᴏ👋**\n\n"
         "➠ **ɪ ᴀᴍ ᴛxᴛ ᴛᴏ ᴠɪᴅᴇᴏ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ.**\n"
-        "➠ **ғᴏʀ ᴜsᴇ ᴍᴇ sᴇɴᴅ /ASP.\n"
+        "➠ **ғᴏʀ ᴜsᴇ ᴍᴇ sᴇɴᴅ /sameerji.\n"
         "➠ **ғᴏʀ ɢᴜɪᴅᴇ sᴇɴᴅ /help."
 )
     
@@ -141,7 +158,7 @@ async def start_command(bot: Client, message: Message):
 # Stop command handler
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m: Message):
-    await m.reply_text("**𝗦𝗧𝗢𝗣𝗣𝗘𝗗**🚦", True)
+    await m.reply_text("**𝗦𝘁𝗼𝗽𝗽𝗲𝗱**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 @bot.on_message(filters.command("restart"))
@@ -296,7 +313,7 @@ async def edit_txt(client, message: Message):
     try:
         await message.reply_document(
             document=final_file_path,
-            caption="📥**𝗘𝗱𝗶𝘁𝗲𝗱 𝗕𝘆 ➤ ꜱᴀᴍᴇᴇʀ ʙʜʏʏᴀ**"
+            caption="📥**𝗘𝗱𝗶𝘁𝗲𝗱 𝗕𝘆 ➤ SAMEER JI**"
         )
     except Exception as e:
         await message.reply_text(f"🚨 **Error**: Unable to send the file.\n\nDetails: {e}")
@@ -386,7 +403,7 @@ async def ytplaylist_to_txt(client: Client, message: Message):
         file_name = save_to_file(videos, title)
         await message.reply_document(
             document=file_name, 
-            caption=f"`{title}`\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ ꜱᴀᴍᴇᴇʀ ʙʜʏʏᴀ"
+            caption=f"`{title}`\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ SAMEER JI"
         )
         os.remove(file_name)
     else:
@@ -408,7 +425,7 @@ async def list_users(client: Client, msg: Message):
 async def help_command(client: Client, msg: Message):
     help_text = (
         "`/start` - Start the bot⚡\n\n"
-        "`/ASP` - Download and upload files (sudo)🎬\n\n"
+        "`/sameerji` - Download and upload files (sudo)🎬\n\n"
         "`/restart` - Restart the bot🔮\n\n" 
         "`/stop` - Stop ongoing process🛑\n\n"
         "`/cookies` - Upload cookies file🍪\n\n"
@@ -422,7 +439,7 @@ async def help_command(client: Client, msg: Message):
     await msg.reply_text(help_text)
 
 # Upload command handler
-@bot.on_message(filters.command(["tushar"]))
+@bot.on_message(filters.command(["sameerji"]))
 async def upload(bot: Client, m: Message):
     if not is_authorized(m.chat.id):
         await m.reply_text("**🚫You are not authorized to use this bot.**")
@@ -470,7 +487,7 @@ async def upload(bot: Client, m: Message):
         arg = int(raw_text)
     except:
         arg = 1
-    await editable.edit("📚 𝗘𝗻𝘁𝗲𝗿 𝗬𝗼𝘂𝗿 𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 📚\n\n🦠 𝗦𝗲𝗻𝗱 `1` 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗗𝗲𝗳𝗮𝘂𝗹𝘁 🦠\n\n Egˏˋ°•*⁀➷`𝗬𝗔𝗞𝗘𝗘𝗡 𝗡𝗘𝗘𝗧 𝗛𝗜𝗡𝗗𝗜 𝟯.𝟬 𝟮𝟬𝟮𝟱` ")
+    await editable.edit("📚 𝗘𝗻𝘁𝗲𝗿 𝗬𝗼𝘂𝗿 𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 📚\n\n🦠 𝗦𝗲𝗻𝗱 `1` 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗗𝗲𝗳𝗮𝘂𝗹𝘁 🦠")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -504,7 +521,7 @@ async def upload(bot: Client, m: Message):
     
     
 
-    await editable.edit("📛 𝗘𝗻𝘁𝗲𝗿 𝗬𝗼𝘂𝗿 𝗡𝗮𝗺𝗲 📛\n\n🐥 𝗦𝗲𝗻𝗱 `1` 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗗𝗲𝗳𝗮𝘂𝗹𝘁 🐥Egˏˋ°•*⁀➷ `𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔`")
+    await editable.edit("📛 𝗘𝗻𝘁𝗲𝗿 𝗬𝗼𝘂𝗿 𝗡𝗮𝗺𝗲 📛\n\n🐥 𝗦𝗲𝗻𝗱 `1` 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗗𝗲𝗳𝗮𝘂𝗹𝘁 🐥")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -535,7 +552,7 @@ async def upload(bot: Client, m: Message):
     else:
         MR = raw_text4
     
-    await editable.edit("𝗡𝗼𝘄 𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗧𝗵𝘂𝗺𝗯 𝗨𝗿𝗹 𝗘𝗴 »https://files.catbox.moe/g7dnnf.jpg \n\n𝗢𝗿 𝗜𝗳 𝗗𝗼𝗻'𝘁 𝗪𝗮𝗻𝘁 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗲𝗻𝗱 = 𝗻𝗼")
+    await editable.edit("𝗡𝗼𝘄 𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗧𝗵𝘂𝗺𝗯 𝗨𝗿𝗹 𝗘𝗴 » https://files.catbox.moe/b0ptct.jpg\n\n𝗢𝗿 𝗜𝗳 𝗗𝗼𝗻'𝘁 𝗪𝗮𝗻𝘁 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗲𝗻𝗱 = 𝗻𝗼")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -588,14 +605,25 @@ async def upload(bot: Client, m: Message):
                 name = f'{str(count).zfill(3)}) {name1[:60]}'
                 cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
 
-            
+            elif "apps-s3-jw-prod.utkarshapp.com" in url:
+                if 'enc_plain_mp4' in url:
+                    url = url.replace(url.split("/")[-1], res+'.mp4')
+                    
+                elif 'Key-Pair-Id' in url:
+                    url = None
+                    
+                elif '.m3u8' in url:
+                    q = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).split("/")[0]
+                    x = url.split("/")[5]
+                    x = url.replace(x, "")
+                    url = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).replace(q+"/", x)
             #elif '/master.mpd' in url:
              #id =  url.split("/")[-2]
              #url = f"https://player.muftukmall.site/?id={id}"
             elif "/master.mpd" in url or "d1d34p8vz63oiq" in url or "sec1.pw.live" in url:
              id =  url.split("/")[-2]
-             #url = f"https://anonymouspwplayer-b99f57957198.herokuapp.com/pw?url={url}?token={raw_text4}"
-             url = f"https://madxabhi-pw.onrender.com/{id}/master.m3u8?token={raw_text4}"
+             url = f"https://anonymouspwplayer-b99f57957198.herokuapp.com/pw?url={url}?token={raw_text4}"
+             #url = f"https://madxabhi-pw.onrender.com/{id}/master.m3u8?token={raw_text4}"
             #elif '/master.mpd' in url:
              #id =  url.split("/")[-2]
              #url = f"https://dl.alphacbse.site/download/{id}/master.m3u8"
@@ -649,13 +677,13 @@ async def upload(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:  
-                cc = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🌺 𝗟𝗘𝗖 𝗡𝗔𝗠𝗘 ➥ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                #cpw = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🌺 𝗟𝗘𝗖 𝗡𝗔𝗠𝗘 ➥ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                #cyt = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🌺 𝗟𝗘𝗖 𝗡𝗔𝗠𝗘 ➥ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mp4\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                cpvod = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🌺 𝗟𝗘𝗖 𝗡𝗔𝗠𝗘 ➥ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                cimg = f'**[📁] 𝗜𝗺𝗴_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🍂 𝗣𝗗𝗙 𝗡𝗔𝗠𝗘 ➥ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.jpg\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                cczip = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🍂 𝗣𝗗𝗙 𝗡𝗔𝗠𝗘 ➥ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.zip\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
-                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n🍂 𝗣𝗗𝗙 𝗡𝗔𝗠𝗘 ➥ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.pdf\n\n\n<pre><code>📚 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➺ {b_name}</code></pre>\n\n\n📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐁𝐘** જ⁀➴  {CR}**\n\n\n∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘'
+                cc = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.({res}).SAMEERJI.mkv\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                #cpw = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.({res}).SAMEERJI.mkv\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                #cyt = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.({res}).SAMEERJI.mp4\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                cpvod = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.({res}).SAMEERJI.mkv\n\n\n🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__Click Here to Watch Video__</a>\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                cimg = f'**[📁] 𝗜𝗺𝗴_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.SAMEERJI.jpg\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                cczip = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.SAMEERJI.zip\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 : {str(count).zfill(3)}.\n\n\n☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲 ➤ {name1}.SAMEERJI.pdf\n\n\n<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 ➤ {b_name}</code></pre>\n\n\n📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}**'
           
                 if "drive" in url:
                     try:
@@ -797,7 +825,7 @@ async def upload(bot: Client, m: Message):
                 else:
                     emoji_message = await show_random_emojis(message)
                     remaining_links = len(links) - count
-                    Show = f"**🍁 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚 🍁**\n\n**📝ɴᴀᴍᴇ » ** `{name}\n\n🔗ᴛᴏᴛᴀʟ ᴜʀʟ » {len(links)}\n\n🗂️ɪɴᴅᴇx » {str(count)}/{len(links)}\n\n🌐ʀᴇᴍᴀɪɴɪɴɢ ᴜʀʟ » {remaining_links}\n\n❄ǫᴜᴀʟɪᴛʏ » {res}`\n\n**🔗ᴜʀʟ » ** `{url}`\n\n🤖𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ˏˋ°•*⁀➷∘₊✧───𝗦𝗔𝗠𝗘𝗘𝗥 𝗕𝗛𝗬𝗬𝗔───✧₊∘\n\n🙂 चलो फिर से अजनबी बन जायें 🙂"
+                    Show = f"**🍁 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚 🍁**\n\n**📝ɴᴀᴍᴇ » ** `{name}\n\n🔗ᴛᴏᴛᴀʟ ᴜʀʟ » {len(links)}\n\n🗂️ɪɴᴅᴇx » {str(count)}/{len(links)}\n\n🌐ʀᴇᴍᴀɪɴɪɴɢ ᴜʀʟ » {remaining_links}\n\n❄ǫᴜᴀʟɪᴛʏ » {res}`\n\n**🔗ᴜʀʟ » ** `{url}`\n\n🤖𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➤ 𝗧𝗨𝗦𝗛𝗔𝗥\n\n🙂 चलो फिर से अजनबी बन जायें 🙂"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -819,7 +847,7 @@ async def upload(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    #await m.reply_text("**💀𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗼𝗻𝗲💀**")
+    #await m.reply_text("**🥳𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗼𝗻𝗲🥳**")
     await m.reply_text(f"`✨𝗕𝗔𝗧𝗖𝗛 𝗦𝗨𝗠𝗠𝗔𝗥𝗬✨\n\n"
                        f"▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
                        f"📛𝗜𝗻𝗱𝗲𝘅 𝗥𝗮𝗻𝗴𝗲 » ({raw_text} to {len(links)})\n"
@@ -830,8 +858,8 @@ async def upload(bot: Client, m: Message):
                        f"🔹𝗩𝗶𝗱𝗲𝗼 » {video_count}\n🔹𝗣𝗱𝗳 » {pdf_count}\n🔹𝗜𝗺𝗴 » {img_count}\n🔹𝗭𝗶𝗽 » {zip_count}\n🔹𝗙𝗮𝗶𝗹𝗲𝗱 𝗨𝗿𝗹 » {failed_count}\n\n"
                        f"▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
                        f"✅𝗦𝗧𝗔𝗧𝗨𝗦 » 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗`")
-    await m.reply_text(f"<pre><code>📥𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗘𝗗 𝗕𝗬 ➤『{CR}』</code></pre>")
-    await m.reply_text(f"<pre><code>『💀𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗞𝗼𝗻 𝗗𝗲𝗴𝗮💀』</code></pre>")                 
+    await m.reply_text(f"<pre><code>📥𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤『{CR}』</code></pre>")
+    await m.reply_text(f"<pre><code>『😏𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗞𝗼𝗻 𝗗𝗲𝗴𝗮😏』</code></pre>")                 
 
 bot.run()
 if __name__ == "__main__":
