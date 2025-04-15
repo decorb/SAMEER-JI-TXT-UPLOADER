@@ -40,12 +40,13 @@ async def progress_bar(current, total, message: Message, start_time, tag="SAMEER
 
     # Format status text
     progress_text = f"""
-⟪ 💥 UPLOADER 💥 ⟫
+╔══ஓ๑↑↑𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚🌠๑ஓ══╗
 ├SPEED ⚡ = {human_readable_size(speed)}/s  \n\n
 ├PROGRESS 🌀 = {round(percentage, 1)}% \n\n
 ├LOADED 📥 = {human_readable_size(current)} \n\n
 ├SIZE 🧲 = {human_readable_size(total)}\n\n
 ├ETA ⏳ = {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
+╚══ஓ๑𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➽@musafir_ji0๑ஓ══╝\n\n
 ⟬ {tag} ⟭
 
 {emoji_line}
