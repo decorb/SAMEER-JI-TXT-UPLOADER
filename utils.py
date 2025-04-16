@@ -20,7 +20,7 @@ def human_readable_size(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙", batch_name="Batch 1"):
+async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙"):
     now = time.time()
     elapsed = max(time.time() - start_time, 1)
 
@@ -37,16 +37,15 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     progress_text = f"""
 {tag}
 
-╔════ ✿ ❀ 𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗜𝗡 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗪𝗔𝗜𝗧✿ ❀ ════╗
+╔════ ✿ ❀  UPLOADING IN PROGRESS WAIT ✿ ❀ ════╗
 
-➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}% \n\n
-➸ 📶 SPEED      : {human_readable_size(speed)}/s \n\n
-➸ 📥 DOWNLOADED : {human_readable_size(current)} \n\n
-➸ 📦 TOTAL SIZE : {human_readable_size(total)} \n\n
-➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
-➸ 📝 BATCH NAME : {batch_name} \n\n
+➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}%
+➸ 📶 SPEED      : {human_readable_size(speed)}/s
+➸ 📥 DOWNLOADED : {human_readable_size(current)}
+➸ 📦 TOTAL SIZE : {human_readable_size(total)}
+➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}
 
-╚════ ✿ ❀ 𝗕𝗢𝗧 𝗠𝗔𝗗 𝗕𝗬➸ @MUSAFI_JI0 ✿ ❀ ════╝ \n\n
+╚════ ✿ ❀ 𝗕𝗬 ➸ @musafir_ji0 ✿ ❀ ════╝
 
 {emoji}  # Only one emoji below
 """
