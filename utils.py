@@ -32,7 +32,7 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     done = int(bar_length * current / total)
     bar = "█" * done + "▒" * (bar_length - done)
 
-    emoji = random.choice(EMOJIS)  # Choose one emoji
+    emoji = random.choice(EMOJIS)  # Random emoji for each update
 
     progress_text = f"""
 {tag}
@@ -47,7 +47,7 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
 
 ╚════ ✿ ❀ 𝗕𝗬 ➸ @musafir_ji0 ✿ ❀ ════╝
 
-{emoji}  # Only one emoji below
+{emoji}  # Random emoji that changes with each update
 """
 
     try:
