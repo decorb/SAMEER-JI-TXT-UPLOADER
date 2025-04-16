@@ -37,16 +37,16 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     progress_text = f"""
 {tag}
 
-╔════ ✿ ❀  UPLOADING IN PROGRESS WAIT ✿ ❀ ════╗
+╔════ ✿ ❀ 𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗜𝗡 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗪𝗔𝗜𝗧✿ ❀ ════╗
 
-➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}%
-➸ 📶 SPEED      : {human_readable_size(speed)}/s
-➸ 📥 DOWNLOADED : {human_readable_size(current)}
-➸ 📦 TOTAL SIZE : {human_readable_size(total)}
-➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}
-➸ 📝 BATCH NAME : {batch_name}
+➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}% \n\n
+➸ 📶 SPEED      : {human_readable_size(speed)}/s \n\n
+➸ 📥 DOWNLOADED : {human_readable_size(current)} \n\n
+➸ 📦 TOTAL SIZE : {human_readable_size(total)} \n\n
+➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
+➸ 📝 BATCH NAME : {batch_name} \n\n
 
-╚════ ✿ ❀ 𝗕𝗬 ➸ @musafir_ji0 ✿ ❀ ════╝
+╚════ ✿ ❀ 𝗕𝗢𝗧 𝗠𝗔𝗗 𝗕𝗬➸ @MUSAFI_JI0 ✿ ❀ ════╝ \n\n
 
 {emoji}  # Only one emoji below
 """
