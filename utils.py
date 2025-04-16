@@ -2,7 +2,6 @@ import time
 import random
 from pyrogram.types import Message
 
-# One-emoji style
 EMOJIS = [
     "🦋", "✨", "🌸", "💫", "🌼", "🌙", "🔥", "💎", "⚡",
     "🌪️", "🧿", "💥", "📀", "📼", "💽", "💾", "📂", "📁",
@@ -31,27 +30,27 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     percentage = current * 100 / total
     eta = (total - current) / speed if speed > 0 else 0
 
-    # Fancy progress bar visual
-    bar_length = 25
+    bar_length = 30
     done = int(bar_length * current / total)
-    bar = "█" * done + "░" * (bar_length - done)
+    bar = "█" * done + "▒" * (bar_length - done)
+
     emoji = random.choice(EMOJIS)
 
     progress_text = f"""
-╭━━━━━⭑ 𝗨𝗣𝗟𝗢𝗔𝗗 𝗜𝗡 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 ⭑━━━━━╮
+UPLOAD IN PROGRESS...
 
-📶 SPEED     : {human_readable_size(speed)}/s
-📊 PROGRESS  : [{bar}] {round(percentage, 1)}%
-📥 DOWNLOADED: {human_readable_size(current)}
-📦 TOTAL SIZE: {human_readable_size(total)}
-⏳ ETA       : {time.strftime('%Mm %Ss', time.gmtime(eta))}
+Speed       : {human_readable_size(speed)}/s
+Progress    : [{bar}] {round(percentage, 1)}%
+Downloaded  : {human_readable_size(current)}
+Total Size  : {human_readable_size(total)}
+ETA         : {time.strftime('%Mm %Ss', time.gmtime(eta))}
 
-╰━━➤ 𝗠𝗔𝗗𝗘 𝗪𝗜𝗧𝗛 💙 𝗕𝗬 ➤ @musafir_ji0
-
-{tag} {emoji}
+Made by @musafir_ji0
+{tag}
+{emoji}
 """
+
     try:
         await message.edit_text(f"```{progress_text}```")
     except Exception:
         pass
-
