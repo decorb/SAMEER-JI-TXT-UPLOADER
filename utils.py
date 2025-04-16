@@ -2,7 +2,6 @@ import time
 import random
 from pyrogram.types import Message
 
-# One emoji only
 EMOJIS = [
     "🦋", "✨", "🌸", "💫", "🌼", "🌙", "🔥", "💎", "⚡",
     "🌪️", "🧿", "💥", "📀", "📼", "💽", "💾", "📂", "📁",
@@ -21,11 +20,9 @@ def human_readable_size(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙"):
+async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙", batch_name="Batch 1"):
     now = time.time()
-    elapsed = now - start_time
-    if elapsed == 0:
-        elapsed = 1
+    elapsed = max(time.time() - start_time, 1)
 
     speed = current / elapsed
     percentage = current * 100 / total
@@ -35,20 +32,23 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     done = int(bar_length * current / total)
     bar = "█" * done + "▒" * (bar_length - done)
 
-    emoji = random.choice(EMOJIS)
+    emoji = random.choice(EMOJIS)  # Choose one emoji
 
     progress_text = f"""
-╭━━━━━⭑ 𝗨𝗣𝗟𝗢𝗔𝗗 𝗜𝗡 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 ⭑━━━━━╮
+{tag}
 
-📶 SPEED     : {human_readable_size(speed)}/s
-📊 PROGRESS  : [{bar}] {round(percentage, 1)}%
-📥 DOWNLOADED: {human_readable_size(current)}
-📦 TOTAL SIZE: {human_readable_size(total)}
-⏳ ETA       : {time.strftime('%Mm %Ss', time.gmtime(eta))}
+╔════ ✿ ❀  UPLOADING IN PROGRESS WAIT ✿ ❀ ════╗
 
-╰━━➤ 𝗠𝗔𝗗𝗘 𝗪𝗜𝗧𝗛 💙 𝗕𝗬 ➤ @musafir_ji0
+➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}%
+➸ 📶 SPEED      : {human_readable_size(speed)}/s
+➸ 📥 DOWNLOADED : {human_readable_size(current)}
+➸ 📦 TOTAL SIZE : {human_readable_size(total)}
+➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}
+➸ 📝 BATCH NAME : {batch_name}
 
-{tag} {emoji}
+╚════ ✿ ❀ 𝗕𝗬 ➸ @musafir_ji0 ✿ ❀ ════╝
+
+{emoji}  # Only one emoji below
 """
 
     try:
