@@ -20,7 +20,7 @@ def human_readable_size(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-async def progress_bar(current, total, message: Message, start_time, tag="💙SAMEERJI💙"):
+async def progress_bar(current, total, message: Message, start_time, tag="💙SAMEER JI💙"):
     now = time.time()
     elapsed = max(time.time() - start_time, 1)
 
@@ -37,7 +37,7 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙SA
     progress_text = f"""
 {tag}
 
-╔════ ✿ ❀↑↑𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗪𝗔𝗜𝗧...✿ ❀ ════╗
+╔════ ↑↓𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗪𝗔𝗜𝗧.....↑↓ ════╗
 
 ➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}% \n\n
 ➸ 📶 SPEED      : {human_readable_size(speed)}/s \n\n
@@ -45,9 +45,9 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙SA
 ➸ 📦 TOTAL SIZE : {human_readable_size(total)}\n\n
 ➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
 
-╚════ 👨‍💻 𝗠𝗔𝗗𝗘 𝗕𝗬  ➸ @MUSAFI_JI0  ════╝ \n\n
+╚════👨‍💻 𝗠𝗔𝗗𝗘 𝗕𝗬 ➸ @MUSAFI_JI0 ════╝ \n\n
 
-{emoji}  # Random emoji will change with each update
+{emoji} 
 """
 
     try:
