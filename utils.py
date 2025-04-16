@@ -20,7 +20,7 @@ def human_readable_size(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙"):
+async def progress_bar(current, total, message: Message, start_time, tag="💙SAMEERJI💙"):
     now = time.time()
     elapsed = max(time.time() - start_time, 1)
 
@@ -37,17 +37,17 @@ async def progress_bar(current, total, message: Message, start_time, tag="💙Sa
     progress_text = f"""
 {tag}
 
-╔════ ✿ ❀  UPLOADING IN PROGRESS WAIT ✿ ❀ ════╗
+╔════ ✿ ❀↑↑𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗪𝗔𝗜𝗧...✿ ❀ ════╗
 
-➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}%
-➸ 📶 SPEED      : {human_readable_size(speed)}/s
-➸ 📥 DOWNLOADED : {human_readable_size(current)}
-➸ 📦 TOTAL SIZE : {human_readable_size(total)}
-➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}
+➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}% \n\n
+➸ 📶 SPEED      : {human_readable_size(speed)}/s \n\n
+➸ 📥 DOWNLOADED : {human_readable_size(current)} \n\n
+➸ 📦 TOTAL SIZE : {human_readable_size(total)}\n\n
+➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
 
-╚════ ✿ ❀ 𝗕𝗬 ➸ @musafir_ji0 ✿ ❀ ════╝
+╚════ 👨‍💻 𝗠𝗔𝗗𝗘 𝗕𝗬  ➸ @MUSAFI_JI0  ════╝ \n\n
 
-{emoji}  # Random emoji that changes with each update
+{emoji}  # Random emoji will change with each update
 """
 
     try:
