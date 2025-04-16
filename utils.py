@@ -1,55 +1,54 @@
 import time
 import random
-from math import ceil
 from pyrogram.types import Message
 
-# Emoji groups to randomly decorate bottom line
-EMOJI_SETS = [
-    "🦋✨🌸💫🌼🌙",
-    "🔥💎⚡🌪️🧿💥",
-    "📀📼💽💾📂📁",
-    "🌟👑🚀🎯🎉🧲",
-    "🎵🎶🎧🎷🎺🎸",
-    "💙💚💛🧡❤️💜",
-    "🧠📚📝✏️📖📒",
-    "🧃🍭🍬🍫🍩🍪"
+# One-emoji style
+EMOJIS = [
+    "🦋", "✨", "🌸", "💫", "🌼", "🌙", "🔥", "💎", "⚡",
+    "🌪️", "🧿", "💥", "📀", "📼", "💽", "💾", "📂", "📁",
+    "🌟", "👑", "🚀", "🎯", "🎉", "🧲", "🎵", "🎶", "🎧",
+    "🎷", "🎺", "🎸", "💙", "💚", "💛", "🧡", "❤️", "💜",
+    "🧠", "📚", "📝", "✏️", "📖", "📒", "🧃", "🍭", "🍬",
+    "🍫", "🍩", "🍪"
 ]
 
 def human_readable_size(size):
-    power = 2**10
+    power = 2 ** 10
     n = 0
     units = ["B", "KiB", "MiB", "GiB", "TiB"]
     while size > power and n < len(units) - 1:
         size /= power
         n += 1
-    return f"{round(size, 2)}{units[n]}"
+    return f"{round(size, 2)} {units[n]}"
 
 
-async def progress_bar(current, total, message: Message, start_time, tag="SAMEER BHYYA"):
+async def progress_bar(current, total, message: Message, start_time, tag="💙Sameer💙"):
     now = time.time()
     elapsed = now - start_time
-    if elapsed == 0:
-        elapsed = 1
+    elapsed = elapsed if elapsed > 0 else 1
 
     speed = current / elapsed
     percentage = current * 100 / total
     eta = (total - current) / speed if speed > 0 else 0
 
-    # Get random emoji line
-    emoji_line = random.choice(EMOJI_SETS)
+    # Fancy progress bar visual
+    bar_length = 25
+    done = int(bar_length * current / total)
+    bar = "█" * done + "░" * (bar_length - done)
+    emoji = random.choice(EMOJIS)
 
-    # Format status text
     progress_text = f"""
-╔══ஓ๑↑↑𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚🌠๑ஓ══╗
-├SPEED ⚡ = {human_readable_size(speed)}/s  \n\n
-├PROGRESS 🌀 = {round(percentage, 1)}% \n\n
-├LOADED 📥 = {human_readable_size(current)} \n\n
-├SIZE 🧲 = {human_readable_size(total)}\n\n
-├ETA ⏳ = {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
-╚══ஓ๑𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➽@musafir_ji0๑ஓ══╝\n\n
-⟬ {tag} ⟭
+╭━━━━━⭑ 𝗨𝗣𝗟𝗢𝗔𝗗 𝗜𝗡 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 ⭑━━━━━╮
 
-{emoji_line}
+📶 SPEED     : {human_readable_size(speed)}/s
+📊 PROGRESS  : [{bar}] {round(percentage, 1)}%
+📥 DOWNLOADED: {human_readable_size(current)}
+📦 TOTAL SIZE: {human_readable_size(total)}
+⏳ ETA       : {time.strftime('%Mm %Ss', time.gmtime(eta))}
+
+╰━━➤ 𝗠𝗔𝗗𝗘 𝗪𝗜𝗧𝗛 💙 𝗕𝗬 ➤ @musafir_ji0
+
+{tag} {emoji}
 """
     try:
         await message.edit_text(f"```{progress_text}```")
