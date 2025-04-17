@@ -1,56 +1,99 @@
 import time
 import random
-from pyrogram.types import Message
+from datetime import timedelta
+from pyrogram.errors import FloodWait
 
-EMOJIS = [
-    "🦋", "✨", "🌸", "💫", "🌼", "🌙", "🔥", "💎", "⚡",
-    "🌪️", "🧿", "💥", "📀", "📼", "💽", "💾", "📂", "📁",
-    "🌟", "👑", "🚀", "🎯", "🎉", "🧲", "🎵", "🎶", "🎧",
-    "🎷", "🎺", "🎸", "💙", "💚", "💛", "🧡", "❤️", "💜",
-    "🧠", "📚", "📝", "✏️", "📖", "📒", "🧃", "🍭", "🍬",
-    "🍫", "🍩", "🍪"
-]
+class Timer:
+    def __init__(self, time_between=5):
+        self.start_time = time.time()
+        self.time_between = time_between
 
-def human_readable_size(size):
-    power = 2 ** 10
-    n = 0
-    units = ["B", "KiB", "MiB", "GiB", "TiB"]
-    while size > power and n < len(units) - 1:
-        size /= power
-        n += 1
-    return f"{round(size, 2)} {units[n]}"
+    def can_send(self):
+        if time.time() > (self.start_time + self.time_between):
+            self.start_time = time.time()
+            return True
+        return False
 
-async def progress_bar(current, total, message: Message, start_time, tag="💙SAMEER JI💙"):
-    now = time.time()
-    elapsed = max(time.time() - start_time, 1)
+def hrb(value, digits=2, delim="", postfix=""):
+    if value is None:
+        return None
+    chosen_unit = "B"
+    for unit in ("KiB", "MiB", "GiB", "TiB"):
+        if value > 1000:
+            value /= 1024
+            chosen_unit = unit
+        else:
+            break
+    return f"{value:.{digits}f}" + delim + chosen_unit + postfix
 
-    speed = current / elapsed
-    percentage = current * 100 / total
-    eta = (total - current) / speed if speed > 0 else 0
+def hrt(seconds, precision=0):
+    pieces = []
+    value = timedelta(seconds=seconds)
 
-    bar_length = 30
-    done = int(bar_length * current / total)
-    bar = "█" * done + "▒" * (bar_length - done)
+    if value.days:
+        pieces.append(f"{value.days}d")
 
-    emoji = random.choice(EMOJIS)  # Random emoji for each update
+    seconds = value.seconds
 
-    progress_text = f"""
-{tag}
+    if seconds >= 3600:
+        hours = int(seconds / 3600)
+        pieces.append(f"{hours}h")
+        seconds -= hours * 3600
 
-╔════ ↑↓𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗪𝗔𝗜𝗧.....↑↓ ════╗
+    if seconds >= 60:
+        minutes = int(seconds / 60)
+        pieces.append(f"{minutes}m")
+        seconds -= minutes * 60
 
-➸ 📊 PROGRESS   : [{bar}] {round(percentage, 1)}% \n\n
-➸ 📶 SPEED      : {human_readable_size(speed)}/s \n\n
-➸ 📥 DOWNLOADED : {human_readable_size(current)} \n\n
-➸ 📦 TOTAL SIZE : {human_readable_size(total)}\n\n
-➸ ⏳ ETA        : {time.strftime('%Mm %Ss', time.gmtime(eta))}\n\n
+    if seconds > 0 or not pieces:
+        pieces.append(f"{seconds}s")
 
-╚════👨‍💻 𝗠𝗔𝗗𝗘 𝗕𝗬 ➸ @MUSAFI_JI0 ════╝ \n\n
+    if not precision:
+        return "".join(pieces)
 
-{emoji} 
-"""
+    return "".join(pieces[:precision])
 
-    try:
-        await message.edit_text(f"```{progress_text}```")
-    except Exception:
-        pass
+timer = Timer()
+
+EMOJIS = ["🌹", "💥", "🔥", "🕊", "💫", "👑", "🥀", "🦋", "🕉", "☯️", "🐉", "❤️‍🔥", "💎", "💖", "✨", "🌟"]
+
+async def progress_bar(current, total, reply, start):
+    if timer.can_send():
+        now = time.time()
+        diff = now - start
+        if diff < 1:
+            return
+        else:
+            perc = f"{current * 100 / total:.1f}%"
+            elapsed_time = round(diff)
+            speed = current / elapsed_time
+            remaining_bytes = total - current
+            eta = hrt(remaining_bytes / speed, precision=1) if speed > 0 else "-"
+            sp = str(hrb(speed)) + "/s"
+            tot = hrb(total)
+            cur = hrb(current)
+
+            # Bar logic (►►►▷▷▷ style)
+            bar_length = 12
+            completed_length = int(current * bar_length / total)
+            remaining_length = bar_length - completed_length
+            progress_bar_visual = "►" * completed_length + "▷" * remaining_length
+
+            # Random emoji
+            big_emoji = random.choice(EMOJIS)
+
+            try:
+                await reply.edit(
+                    f'<b>🔥•°•⩺DOCTOR BABA⩹•°•💚\n\n'
+                    f'╭━━━━━━━━━━━━━━━➣\n'
+                    f'┣⪼ 🚀 <u>UPLOADER</u> 🚀\n'
+                    f'┣⪼ {progress_bar_visual} | {perc}\n'
+                    f'┣⪼ SPEED ⚡ {sp}\n'
+                    f'┣⪼ LOADED 📦 {cur}\n'
+                    f'┣⪼ SIZE 🧲 {tot}\n'
+                    f'┣⪼ ETA ⏳ {eta}\n'
+                    f'╰━━━━━━━━━━━━━━━➣\n'
+                    f'@ASHIQI_092 {big_emoji}</b>'
+                )
+            except FloodWait as e:
+                time.sleep(e.x)
