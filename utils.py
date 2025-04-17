@@ -55,7 +55,7 @@ def hrt(seconds, precision=0):
 
 timer = Timer()
 
-EMOJIS = ["🌹", "💥", "🔥", "🕊", "💫", "👑", "🥀", "🦋", "🕉", "☯️", "🐉", "❤️‍🔥", "💎", "💖", "✨", "🌟"]
+EMOJIS = ["🦋", "🔥", "💥", "💫", "👑", "🥀", "🕊", "💎", "💖", "✨", "🌟", "🕉", "☯️", "🐉", "❤️‍🔥", "💎", "💖"]
 
 async def progress_bar(current, total, reply, start):
     if timer.can_send():
@@ -84,15 +84,15 @@ async def progress_bar(current, total, reply, start):
 
             try:
                 await reply.edit(
-                    f'<b>🔥•°•⩺DOCTOR BABA⩹•°•💚\n\n'
-                    f'╭━━━━━━━━━━━━━━━➣\n'
-                    f'┣⪼ 🚀 <u>UPLOADER</u> 🚀\n'
-                    f'┣⪼ {progress_bar_visual} | {perc}\n'
-                    f'┣⪼ SPEED ⚡ {sp}\n'
-                    f'┣⪼ LOADED 📦 {cur}\n'
-                    f'┣⪼ SIZE 🧲 {tot}\n'
-                    f'┣⪼ ETA ⏳ {eta}\n'
-                    f'╰━━━━━━━━━━━━━━━➣\n'
+                    f'<b>🔥•°•⩺SAMEER BHYYA⩹•°•💚\n\n'
+                    f'╭━━━━━━━━━━━━━━━➣\n\n'
+                    f'┣⪼ 🚀 <u>↑↓𝗨𝗣𝗟𝗢𝗔𝗗𝗜𝗡𝗚 𝗪𝗔𝗜𝗧...↑↓</u> 🚀\n\n'
+                    f'┣⪼ {progress_bar_visual} | {perc}\n\n'
+                    f'┣⪼ SPEED ⚡ {sp}\n\n'
+                    f'┣⪼ LOADED 📦 {cur}\n\n'
+                    f'┣⪼ SIZE 🧲 {tot}\n\n'
+                    f'┣⪼ ETA ⏳ {eta}\n\n'
+                    f'╰━━━━━━━━━━━━━━━➣\n\n'
                     f'@ASHIQI_092 {big_emoji}</b>'
                 )
             except FloodWait as e:
