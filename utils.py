@@ -39,12 +39,10 @@ def hrt(seconds, precision=0):
         hours = int(seconds / 3600)
         pieces.append(f"{hours}h")
         seconds -= hours * 3600
-
     if seconds >= 60:
         minutes = int(seconds / 60)
         pieces.append(f"{minutes}m")
         seconds -= minutes * 60
-
     if seconds > 0 or not pieces:
         pieces.append(f"{seconds}s")
 
@@ -93,7 +91,9 @@ async def progress_bar(current, total, reply, start):
                     f'┣⪼ SIZE 🧲 {tot}\n\n'
                     f'┣⪼ ETA ⏳ {eta}\n\n'
                     f'╰━《@CHAT_WITH_SAMEER_BOT》━➣\n\n'
-                    f'【@SAMEER_OFFICAL_092】\n\n {big_emoji}</b>'
+                    f'【@SAMEER_OFFICAL_092】\n\n'
+                    # Emoji on a new line and bigger
+                    f'<b><code>\n　　{big_emoji}　　</code></b>'
                 )
             except FloodWait as e:
                 time.sleep(e.x)
