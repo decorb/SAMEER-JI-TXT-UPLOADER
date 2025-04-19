@@ -39,10 +39,12 @@ def hrt(seconds, precision=0):
         hours = int(seconds / 3600)
         pieces.append(f"{hours}h")
         seconds -= hours * 3600
+
     if seconds >= 60:
         minutes = int(seconds / 60)
         pieces.append(f"{minutes}m")
         seconds -= minutes * 60
+
     if seconds > 0 or not pieces:
         pieces.append(f"{seconds}s")
 
@@ -79,6 +81,7 @@ async def progress_bar(current, total, reply, start):
 
             # Random emoji
             big_emoji = random.choice(EMOJIS)
+            final_emoji = f"{big_emoji} {big_emoji} {big_emoji}"
 
             try:
                 await reply.edit(
@@ -91,9 +94,9 @@ async def progress_bar(current, total, reply, start):
                     f'┣⪼ SIZE 🧲 {tot}\n\n'
                     f'┣⪼ ETA ⏳ {eta}\n\n'
                     f'╰━《@CHAT_WITH_SAMEER_BOT》━➣\n\n'
-                    f'【@SAMEER_OFFICAL_092】\n\n'
-                    # Emoji on a new line and bigger
-                    f'<b><code>\n　　{big_emoji}　　</code></b>'
+                    f'【@SAMEER_OFFICAL_092】</b>\n\n'
+                    f'<b><code>　　🦋🦋🦋</code></b>\n\n'  # Emoji ko bada banane ke liye
+                    f'<i><b><code>　💖</code></b></i>'  # Emoji ko zyada bada aur prominent banane ke liye
                 )
             except FloodWait as e:
                 time.sleep(e.x)
