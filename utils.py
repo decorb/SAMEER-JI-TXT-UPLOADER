@@ -81,7 +81,6 @@ async def progress_bar(current, total, reply, start):
 
             # Random emoji
             big_emoji = random.choice(EMOJIS)
-            final_emoji = f"{big_emoji} {big_emoji} {big_emoji}"
 
             try:
                 await reply.edit(
@@ -94,9 +93,7 @@ async def progress_bar(current, total, reply, start):
                     f'┣⪼ SIZE 🧲 {tot}\n\n'
                     f'┣⪼ ETA ⏳ {eta}\n\n'
                     f'╰━《@CHAT_WITH_SAMEER_BOT》━➣\n\n'
-                    f'【@SAMEER_OFFICAL_092】</b>\n\n'
-                    f'<b><code>　　🦋🦋🦋</code></b>\n\n'  # Emoji ko bada banane ke liye
-                    f'<i><b><code>　💖</code></b></i>'  # Emoji ko zyada bada aur prominent banane ke liye
+                    f'【@SAMEER_OFFICAL_092】\n\n {big_emoji}</b>'
                 )
             except FloodWait as e:
                 time.sleep(e.x)
