@@ -56,8 +56,7 @@ def hrt(seconds, precision=0):
 timer = Timer()
 
 EMOJIS = ["🦋", "🔥", "💥", "💫", "👑", "🥀", "🕊", "💎", "💖", "✨", "🌟", "🕉", "☯️", "🐉", "❤️‍🔥", "💎", "💖"]
-emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
-    return emoji_message
+ 
 
 async def progress_bar(current, total, reply, start):
     if timer.can_send():
