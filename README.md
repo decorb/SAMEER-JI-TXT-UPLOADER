@@ -1,5 +1,5 @@
 <h1 align="center">
-  🇮🇳 SAMEER JI ᴛxᴛ ᴜᴘʟᴏᴀᴅᴇʀ 🇮🇳
+SAMEERJI TXT TO VIDEO BOT
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Txt+Uploader+Bot+!)
