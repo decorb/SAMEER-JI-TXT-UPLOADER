@@ -497,7 +497,7 @@ async def upload(bot: Client, m: Message):
         b_name = raw_text0
     
 
-    await editable.edit("**📸 𝗘𝗻𝘁𝗲𝗿 𝗥𝗲𝘀𝗼𝗹𝘂𝘁𝗶𝗼𝗻 📸**\n➤ `144`\n➤ `240`\n➤ `360`\n➤ `480`\n➤ `720`\n➤ `1080`")
+    await editable.edit("**💀चल अपना 𝗩𝗶𝗱𝗲𝗼 की ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸 चुन बे 🤬**\n\n➺`144`n\n\n➺`240`\n\n➺`360`\n\n➺`480`\n\n➺`720`\n\n➺`1080` \n\n➺जल्दी चुन बे ")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
