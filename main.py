@@ -6,7 +6,6 @@ import re
 import sys
 import json
 import time
-import m3u8
 import aiohttp
 import asyncio
 import requests
@@ -18,7 +17,6 @@ import random
 import ffmpeg
 import logging 
 import yt_dlp
-from subprocess import getstatusoutput
 from aiohttp import web
 from core import *
 from urllib.parse import urlparse, parse_qs
@@ -54,7 +52,7 @@ async def show_random_emojis(message):
     return emoji_message
     
 # Define the owner's user ID
-OWNER_ID = 7431004177 # Replace with the actual owner's user ID
+OWNER_ID = 5840594311 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
 SUDO_USERS = [5840594311,7856557198,6303334633]
@@ -553,19 +551,17 @@ async def upload(bot: Client, m: Message):
         MR = token
     else:
         MR = raw_text4
-
     
-
     await editable.edit("𝗡𝗼𝘄 𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗧𝗵𝘂𝗺𝗯 𝗨𝗿𝗹 𝗘𝗴 » https://graph.org/file/13a89d77002442255efad-989ac290c1b3f13b44.jpg\n\n𝗢𝗿 𝗜𝗳 𝗗𝗼𝗻'𝘁 𝗪𝗮𝗻𝘁 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗲𝗻𝗱 = 𝗻𝗼")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
     await editable.delete()
 
-    #thumb = input6.text
-    #if thumb.startswith("http://") or thumb.startswith("https://"):
-        #getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
-        #thumb = "thumb.jpg"
+    thumb = input6.text
+    if thumb.startswith("http://") or thumb.startswith("https://"):
+        getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
+        thumb = "thumb.jpg"
     else:
         thumb == "no"
     failed_count =0
@@ -626,7 +622,7 @@ async def upload(bot: Client, m: Message):
              #url = f"https://player.muftukmall.site/?id={id}"
             elif "/master.mpd" in url or "d1d34p8vz63oiq" in url or "sec1.pw.live" in url:
              id =  url.split("/")[-2]
-             url = f"https://anonymousrajputplayer-9ab2f2730a02.herokuapp.com/pw?url={url}&token={pw_token}"
+             url = f"https://anonymouspwplayer-b99f57957198.herokuapp.com/pw?url={url}?token={raw_text4}"
              #url = f"https://madxabhi-pw.onrender.com/{id}/master.m3u8?token={raw_text4}"
             #elif '/master.mpd' in url:
              #id =  url.split("/")[-2]
